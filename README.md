@@ -4,9 +4,9 @@
 
 Submitted by: **Le Xuan Hoang**
 
-Time spent: **8** hours spent in total
+Time spent: **12** hours spent in total
 
-URL: **Insert your Heroku URL here**
+URL: **https://agile-refuge-74970.herokuapp.com/**
 
 ## User Stories
 
@@ -29,11 +29,7 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-> HINT: You can put a `walkthrough.gif` file in your project folder, add to git, and use the following syntax to embed it:  
-> `![Video Walkthrough](walkthrough.gif)` 
-> 
-
-![Video Walkthrough](/path/to/your/gif/file)
+![Video Walkthrough](https://github.com/lxhoang/assignment_coder_school/blob/master/assignment_coderschool.gif)
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
@@ -45,7 +41,7 @@ I faced to setup challenges on MAC OS El-Captain because postgresql
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2017] [Hoang Le]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
