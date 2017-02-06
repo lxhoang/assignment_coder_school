@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+	<p>
+	  <strong>Title:</strong>
+	  <%= @article.title %>
+	</p>
+
+	<p>
+	  <strong>Body:</strong>
+	  <%= @article.body %>
+	</p>
+
+	<p>
+	  <strong>Views:</strong>
+	  <%= @article.view %>
+	</p>
+
+	<% @article.view += 1  %>
+	<% @article.save %>
+
+	<%= link_to 'Edit', edit_article_path(@article) %> |
+	<%= link_to 'Back', articles_path %>
+
+</div>
+
+
