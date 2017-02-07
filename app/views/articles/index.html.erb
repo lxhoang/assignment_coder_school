@@ -4,7 +4,9 @@
   <h1><%= link_to "Hoang's Blog", articles_path %></h1>
   <h3>My First Rails application for CoderSchool</h3>
 
-<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+<div class = "row" >
+  <div class="col-md-12">
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -42,18 +44,21 @@
   </div>
 </nav>
 
-<p></p>
+  </div>
+</div>
 
+<p></p>
 
   <%= link_to 'New Article', new_article_path, class: "btn btn-primary" %>
   <p></p>  
   
-
   <div class = "row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">      
+      <%= render @articles.sort.reverse %>      
+    </div>
+    <div class="col-md-2"></div>
 
-    <div class="col-sm-8">      
-      <%= render @articles %>      
-    </div> 
 
   </div>
 
