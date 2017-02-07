@@ -37,7 +37,8 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 Describe any challenges encountered while building the app.
 
-I faced to setup challenges on MAC OS El-Captain because postgresql 
+* I faced to setup configuration on MAC OS El-Captain because postgresql need to be updated on this version
+* I had to change default routing on production when deploying on heroku
 
 ## License
 
