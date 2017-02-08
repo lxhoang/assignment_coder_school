@@ -36,7 +36,7 @@
 		  </div>
 		</div>
 	<%end%>
-	<form>
+
 	    <%= form_for [@article, Comment.new] do |f| %>
 			<br>
 			<p>
@@ -45,7 +45,6 @@
 			</p>
 			<p> <%= f.submit "Comment", class: 'btn btn-success' %> </p>
 	<%end%>
-	</form>
 	
 
 	<div class="card">
