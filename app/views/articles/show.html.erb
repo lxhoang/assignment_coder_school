@@ -36,15 +36,24 @@
 		  </div>
 		</div>
 	<%end%>
-
-	<%= form_for [@article, Comment.new] do |f| %>
+	<form>
+	    <%= form_for [@article, Comment.new] do |f| %>
+			<br>
 			<p>
-				<%= f.label :body, "new comment" %>
-				<%= f.text_area :body %>
+				<%= f.text_area :body , class: 'form-control', placeholder: 'What do you think?'%>
 
 			</p>
-			<p> <%= f.submit "add comment" %> </p>
+			<p> <%= f.submit "Comment", class: 'btn btn-success' %> </p>
 	<%end%>
+	</form>
+	
+
+	<div class="card">
+		
+
+	</div>
+
+	
 
 	<div class=""></div>
 

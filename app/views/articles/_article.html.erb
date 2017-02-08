@@ -4,12 +4,11 @@
     <h4 class="card-title"><%=article.title %></h4>
     <p class="card-text"><%= @markdown.render(article.body).html_safe %></p>
     <p class="card-text"><b>Views:</b> <%= article.view %> times</p>
+    <p class="card-text"><b>Comments:</b> <%= pluralize(article.comments.size, 'comment') %></p>
   </div>
   
   <div class="card-footer">
   	<%= link_to 'View', article_path(article), class: 'btn btn-primary' %>
-    
-	
 	<%if article.destroyable? %>
 		<%=link_to 'Edit', edit_article_path(article), class: 'btn btn-warning' %>
 		<%= link_to 'Delete', article, method: :delete, data:  {confirm: 'Are you sure?'}, class: 'btn btn-danger' %>
