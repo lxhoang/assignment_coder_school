@@ -21,6 +21,33 @@
 
 	<% @article.view += 1  %>
 	<% @article.save %>
+
+	<% @comments.each do |comment| %>
+		
+		<div class="card">
+		  <div class="card-block">
+		    <!-- <h4 class="card-title">Card title</h4> -->
+		    <h6 class="card-subtitle mb-2 text-muted">Anonymous said:</h6>
+		    <p class="card-text"><%= comment.body %></p>
+		   	<h6 class="card-subtitle mb-2 text-muted small">Commented at <%= time_ago_in_words(comment.created_at) %> ago</h6>
+		    <%= link_to 'Delete Comment', comment, method: :delete, data: { confirm: 'Are you sure?'} , class: 'btn btn-danger', style:"position:absolute;bottom:5px;right:5px;margin:0;padding:5px 3px;" %>
+
+
+		  </div>
+		</div>
+	<%end%>
+
+	<%= form_for [@article, Comment.new] do |f| %>
+			<p>
+				<%= f.label :body, "new comment" %>
+				<%= f.text_area :body %>
+
+			</p>
+			<p> <%= f.submit "add comment" %> </p>
+	<%end%>
+
+	<div class=""></div>
+
 	<div class="card-footer">
 		<%= link_to 'Edit', edit_article_path(@article), class: 'btn btn-primary' %> |
 		<%= link_to 'Back', articles_path, class: 'btn btn-primary' %>

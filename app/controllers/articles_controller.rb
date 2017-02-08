@@ -23,6 +23,7 @@ class ArticlesController < ApplicationController
   # GET /articles/1.json
   def show
     @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
+    @comments = @article.comments
   end
 
   # GET /articles/new
