@@ -4,7 +4,7 @@
 
 Submitted by: **Le Xuan Hoang**
 
-Time spent: **12** hours spent in total
+Time spent: **20** hours spent in total
 
 URL: **https://agile-refuge-74970.herokuapp.com/**
 
