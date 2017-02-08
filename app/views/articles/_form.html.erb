@@ -1,4 +1,6 @@
+
 <%= form_for(article) do |f| %>
+
   <% if article.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(article.errors.count, "error") %> prohibited this article from being saved:</h2>
@@ -11,17 +13,30 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-  </div>
+   <div class = "row">
 
-  <div class="field">
-    <%= f.label :body %>
-    <%= f.text_area :body %>
-  </div>
+    <div class="col-md-2"></div>
+    <div class="col-md-8" class="form-group">  
+      <div class="field">
+                  <%= f.label :title, class: "text-primary"%>
+                  <%= f.text_field :title, class: 'form-control',placeholder: 'Title must be larger than 5 characters'  %><br>
+      </div>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+      <div class="field">
+                  <%= f.label :body %>
+                  <%= f.text_area :body, class: 'form-control',placeholder: 'Input your information here' %><br>
+      </div>  
+
+      <div class="action">
+                  <%= link_to 'Back', articles_path, class: 'btn btn-info' %>
+
+                  <%= f.submit class: 'btn btn-success' %>
+                </div>
+
+    </div>
+    <div class="col-md-2"></div>
+
+   </div>
+
+
 <% end %>

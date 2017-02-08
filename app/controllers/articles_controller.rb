@@ -5,18 +5,24 @@ class ArticlesController < ApplicationController
   # GET /articles.json
   def index
     @articles = Article.all
-    if params[:search]
+    # params[:search] = nil if params[:search].empty?
+    if params[:search] && !params[:search].empty?
       @articles = Article.search(params[:search]).order("created_at DESC")
+      @search_keyword = params[:search]
+      # if @articles.empty?
+      #   'There is no result'
+      # end
     else
       @articles.order("created_at DESC")
     end
-
     @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
+    
   end
 
   # GET /articles/1
   # GET /articles/1.json
   def show
+    @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
   end
 
   # GET /articles/new
@@ -26,6 +32,7 @@ class ArticlesController < ApplicationController
 
   # GET /articles/1/edit
   def edit
+    # @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
   end
 
   # POST /articles

@@ -7,20 +7,25 @@
 	</p>
 
 	<p>
-	  <strong>Body:</strong>
-	  <%= @article.body %>
+	  <strong>Content:</strong>
+	  <div style="border:3px; border-style:solid; border-color:#FF0000; padding: 1em;">
+	  	<%= @markdown.render(@article.body).html_safe %>
+	  </p>
+	  
 	</p>
 
-	<p>
-	  <strong>Views:</strong>
-	  <%= @article.view %>
+	<p">
+	  <strong>Views by others:</strong>
+	  <%= @article.view %> times
 	</p>
 
 	<% @article.view += 1  %>
 	<% @article.save %>
-
-	<%= link_to 'Edit', edit_article_path(@article) %> |
-	<%= link_to 'Back', articles_path %>
+	<div class="card-footer">
+		<%= link_to 'Edit', edit_article_path(@article), class: 'btn btn-primary' %> |
+		<%= link_to 'Back', articles_path, class: 'btn btn-primary' %>
+	</div>
+	
 
 </div>
 
